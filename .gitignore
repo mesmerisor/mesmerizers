@@ -1,0 +1,7 @@
+.playwright-mcp/
+graphify-out/
+.claude/
+*-top.png
+*-fixed.png
+*-scrolled.png
+footer.png
