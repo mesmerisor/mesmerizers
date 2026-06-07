@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
 
 /* ---------- Design Tokens ---------- */
 :root {
@@ -43,7 +43,7 @@
 
   /* Typography */
   --font-head: 'Poppins', system-ui, sans-serif;
-  --font-body: 'Open Sans', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
 
   /* Radius & shadow */
   --r-sm: 10px;
@@ -95,11 +95,9 @@ h1, h2, h3, h4, h5 { font-family: var(--font-head); font-weight: 700; line-heigh
 .h-md { font-size: clamp(1.5rem, 3vw, 2.1rem); }
 p { color: var(--text-soft); }
 .lead { font-size: clamp(1.05rem, 1.6vw, 1.25rem); color: var(--text-soft); }
-.gradient-text {
-  background: var(--grad-text);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
-}
+/* solid brand emphasis colour (no gradient text) */
+.gradient-text { color: var(--blue-600); }
+.section--navy .gradient-text, .hero .gradient-text, .ctaband .gradient-text, .pagehero .gradient-text { color: var(--blue-400); }
 
 /* ---------- Layout helpers ---------- */
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
@@ -107,13 +105,12 @@ p { color: var(--text-soft); }
 .section--tight { padding: clamp(48px, 7vw, 90px) 0; }
 .center { text-align: center; }
 .eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--font-head); font-weight: 600; font-size: .82rem;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--blue-600); margin-bottom: 16px;
+  display: inline-block;
+  font-family: var(--font-head); font-weight: 600; font-size: .95rem;
+  letter-spacing: 0; text-transform: none;
+  color: var(--blue-600); margin-bottom: 14px;
 }
-.eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--grad-cta); border-radius: 2px; }
-.eyebrow.center-line { justify-content: center; }
+.eyebrow.center-line { display: block; }
 .section-head { max-width: 720px; margin: 0 auto clamp(40px, 6vw, 64px); }
 .section-head.left { margin-inline: 0; }
 .muted-dark { color: var(--on-dark-soft); }
@@ -156,7 +153,7 @@ p { color: var(--text-soft); }
 .nav.scrolled { background: rgba(255, 255, 255, .82); backdrop-filter: blur(16px) saturate(160%); box-shadow: 0 6px 28px rgba(15, 33, 63, .08); height: 66px; }
 .brand { display: flex; align-items: center; gap: 11px; }
 .brand__mark { width: 38px; height: 38px; flex: none; }
-.brand__logo { height: 56px; width: auto; display: block; transition: filter var(--t), height var(--t); }
+.brand__logo { height: 56px; width: auto; display: block; transition: filter var(--t); }
 .nav.scrolled .brand__logo { height: 46px; }
 /* Dark backgrounds: render logo in clean white; restore full colour on light/scrolled nav */
 .nav.on-dark .brand__logo { filter: brightness(0) invert(1); }
@@ -277,7 +274,7 @@ p { color: var(--text-soft); }
 .card__link { display: inline-flex; align-items: center; gap: 7px; margin-top: 18px; font-family: var(--font-head); font-weight: 600; font-size: .9rem; color: var(--blue-600); }
 .card__link svg { width: 16px; height: 16px; transition: transform var(--t); }
 .card:hover .card__link svg { transform: translateX(4px); }
-.card__num { position: absolute; top: 22px; right: 26px; font-family: var(--font-head); font-weight: 800; font-size: 2.6rem; color: rgba(37, 99, 235, .08); line-height: 1; }
+.card__num { display: none; }
 
 /* Glass card (on dark) */
 .glass { background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .12); backdrop-filter: blur(14px); border-radius: var(--r-lg); }
