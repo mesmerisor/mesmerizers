@@ -156,8 +156,8 @@ p { color: var(--text-soft); }
 .nav.scrolled { background: rgba(255, 255, 255, .82); backdrop-filter: blur(16px) saturate(160%); box-shadow: 0 6px 28px rgba(15, 33, 63, .08); height: 66px; }
 .brand { display: flex; align-items: center; gap: 11px; }
 .brand__mark { width: 38px; height: 38px; flex: none; }
-.brand__logo { height: 42px; width: auto; display: block; transition: filter var(--t), height var(--t); }
-.nav.scrolled .brand__logo { height: 36px; }
+.brand__logo { height: 56px; width: auto; display: block; transition: filter var(--t), height var(--t); }
+.nav.scrolled .brand__logo { height: 46px; }
 /* Dark backgrounds: render logo in clean white; restore full colour on light/scrolled nav */
 .nav.on-dark .brand__logo { filter: brightness(0) invert(1); }
 .nav.on-dark.scrolled .brand__logo { filter: none; }
@@ -407,7 +407,7 @@ p { color: var(--text-soft); }
 @media (max-width: 860px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer__grid { grid-template-columns: 1fr; } }
 .footer .brand { color: #fff; margin-bottom: 16px; }
-.footer .brand__logo { height: 46px; filter: brightness(0) invert(1); }
+.footer .brand__logo { height: 60px; filter: brightness(0) invert(1); }
 .footer__about p { font-size: .92rem; color: var(--on-dark-soft); max-width: 320px; }
 .footer h5 { font-family: var(--font-head); color: #fff; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; }
 .footer__links a { display: block; padding: 6px 0; font-size: .92rem; color: var(--on-dark-soft); transition: color var(--t), transform var(--t); }
