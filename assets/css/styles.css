@@ -71,7 +71,7 @@
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 body {
   font-family: var(--font-body);
   color: var(--text);
@@ -125,10 +125,11 @@ p { color: var(--text-soft); }
   padding: var(--pad);
   font-family: var(--font-head); font-weight: 600; font-size: .98rem;
   border-radius: 100px; position: relative; overflow: hidden;
+  white-space: nowrap; line-height: 1; text-align: center;
   transition: transform var(--t-fast) var(--ease), box-shadow var(--t) var(--ease), background var(--t);
   will-change: transform;
 }
-.btn svg { width: 18px; height: 18px; transition: transform var(--t) var(--ease); }
+.btn svg { width: 18px; height: 18px; flex: none; transition: transform var(--t) var(--ease); }
 .btn:hover { transform: translateY(-3px); }
 .btn:active { transform: translateY(-1px); }
 .btn:hover svg { transform: translateX(4px); }

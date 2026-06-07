@@ -1,7 +1,10 @@
 .playwright-mcp/
 graphify-out/
 .claude/
+.vercel/
 *-top.png
 *-fixed.png
 *-scrolled.png
 footer.png
+vercel-live.png
+audit-*.png
