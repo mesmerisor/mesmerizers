@@ -16,7 +16,7 @@
     if (totop) totop.classList.toggle('show', y > 600);
     if (prog) {
       var h = document.documentElement.scrollHeight - window.innerHeight;
-      prog.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+      prog.style.transform = 'scaleX(' + (h > 0 ? (y / h) : 0) + ')';
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });

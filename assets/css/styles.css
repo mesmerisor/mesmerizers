@@ -373,7 +373,7 @@ p { color: var(--text-soft); }
 .info-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 .info-card .ic { flex: none; width: 48px; height: 48px; border-radius: 13px; background: var(--grad-brand); color: #fff; display: grid; place-items: center; }
 .info-card .ic svg { width: 24px; height: 24px; }
-.info-card h4 { font-family: var(--font-head); font-size: 1rem; margin-bottom: 4px; color: var(--navy-900); }
+.info-card h3 { font-family: var(--font-head); font-size: 1rem; margin-bottom: 4px; color: var(--navy-900); }
 .info-card p, .info-card a { font-size: .94rem; color: var(--text-soft); }
 .info-card a:hover { color: var(--blue-600); }
 
@@ -406,7 +406,7 @@ p { color: var(--text-soft); }
 .footer .brand { color: #fff; margin-bottom: 16px; }
 .footer .brand__logo { height: 60px; filter: brightness(0) invert(1); }
 .footer__about p { font-size: .92rem; color: var(--on-dark-soft); max-width: 320px; }
-.footer h5 { font-family: var(--font-head); color: #fff; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; }
+.footer h2 { font-family: var(--font-head); color: #fff; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 18px; font-weight: 600; }
 .footer__links a { display: block; padding: 6px 0; font-size: .92rem; color: var(--on-dark-soft); transition: color var(--t), transform var(--t); }
 .footer__links a:hover { color: #fff; transform: translateX(4px); }
 .footer__contact li { display: flex; gap: 11px; font-size: .9rem; margin-bottom: 13px; align-items: flex-start; }
@@ -434,7 +434,7 @@ p { color: var(--text-soft); }
 [data-delay="5"] { transition-delay: .40s; }
 
 /* progress bar */
-.scroll-prog { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 1100; background: var(--grad-cta); transition: width .1s linear; }
+.scroll-prog { position: fixed; top: 0; left: 0; height: 3px; width: 100%; transform: scaleX(0); transform-origin: left; z-index: 1100; background: var(--grad-cta); transition: transform .1s linear; will-change: transform; }
 
 /* back to top */
 .totop { position: fixed; right: 22px; bottom: 22px; width: 50px; height: 50px; border-radius: 50%; background: var(--blue-600); color: #fff; display: grid; place-items: center; box-shadow: var(--shadow-glow); z-index: 900; opacity: 0; transform: translateY(20px) scale(.8); pointer-events: none; transition: opacity var(--t), transform var(--t) var(--ease), background var(--t); }
